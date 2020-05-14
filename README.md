@@ -5,17 +5,27 @@ the blog allows an authorized user using simple http authentication to create ne
 
 Things you may want to cover:
 
-* Ruby version: 2.3.3p222
+* Ruby version
 
-* System dependencies: PostgreSQL, Git, GitBash (optional)
+  ```
+  2.3.3p222
+  ```
+
+* System dependencies
+  
+  PostgreSQL, Git, GitBash (optional)
 
 * Configuration
-
+  
 * Database creation
 
 * Database initialization
 
 * How to run the test suite
+  ```
+  $ rails server
+  ```
+  then open a browser window at http://localhost:3000
 
 * Services (job queues, cache servers, search engines, etc.)
 
