@@ -1,0 +1,14 @@
+<h3>Comments</h3>
+<div class="comments">
+<% @post.comments.each do |comment| %>
+  <div>
+    <p> <strong> <%= comment.username %> </strong> </p>
+    <p> <%= comment.body %> </p>
+    <%= link_to "x", [comment.post, comment],
+    method: :delete,
+    data: {confirm: 'Are you sure you want to delete this comment?'}, #adding confirmationda ta
+    :class => 'btn danger' %>
+  </div>
+<% end %>
+</div>
+

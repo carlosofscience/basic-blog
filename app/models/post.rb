@@ -1,4 +1,7 @@
 class Post < ApplicationRecord
+
+  has_many :comments #adding relationship so that a post can have many comments
+
   validates :title, presence: true, #require a title,
                     length: {minimum: 5}
   validates :body, presence: true, #require a body,
