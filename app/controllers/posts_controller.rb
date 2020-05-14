@@ -27,7 +27,7 @@ class PostsController < ApplicationController
 
   #helper function to test post paramns
   private def post_params
-    params.require(:post).permit(:title, :body)
+    params.require(:post).permit(:title, :body, :categories)
   end
 
 end
