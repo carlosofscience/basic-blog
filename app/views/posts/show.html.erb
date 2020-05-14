@@ -1,18 +1,20 @@
-<h2><%= @post.title %></h2>
-<p><%= @post.body %></p>
-<p class="category-tags">
-  <% @post.categories.split.each do |category| %>
-    <span class="tag"> <%= category %> </span><br>
-  <% end %>
-</p>
+<div class="container post-view">
+  <h2><%= @post.title %></h2>
+  <p><%= @post.body %></p>
+  <p class="category-tags">
+    <% @post.categories.split.each do |category| %>
+      <span class="tag"> <%= category %> </span><br>
+    <% end %>
+  </p>
+  <%= link_to "Edit", edit_post_path(@post), :class => 'btn' %>
 
-<%= link_to "Edit", edit_post_path(@post), :class => 'btn' %>
+  <%= link_to "Delete", post_path(@post),
+      method: :delete,
+      data: {confirm: 'Are you sure you want to delete this post?'}, #adding confirmationda ta
+      :class => 'btn btn-danger' %>
+</div>
 
-<%= link_to "Delete", post_path(@post),
-    method: :delete,
-    data: {confirm: 'Are you sure you want to delete this post?'}, #adding confirmationda ta
-    :class => 'btn danger' %>
-
-
-<%= render 'comments/comments' %> 
-<%= render 'comments/form' %>
+<div class="container comments-section">
+  <%= render 'comments/form' %>
+  <%= render 'comments/comments' %> 
+</div>

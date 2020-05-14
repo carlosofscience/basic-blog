@@ -1,3 +1,16 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.post-view{
+  background-color: #fcfcfc !important;
+  box-shadow: none !important;
+  .btn{
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+  }
+  .btn-danger{
+    right: calc(63px + 2em);
+  }
+}

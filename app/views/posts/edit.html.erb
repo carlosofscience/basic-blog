@@ -1,6 +1,6 @@
 <h1>Edit Post</h1>
 
-<%= form_for :post, url: post_path(@post), method: :patch do |form| %>
+<%= form_for :post, url: post_path(@post), html:{class:'container post-form'}, method: :patch do |form| %>
   
   <% if @post.errors.any? %>
     <% @post.errors.full_messages.each do |msg| %>
@@ -8,22 +8,19 @@
     <% end %>
   <% end %>
 
-  <p>
+  <div>
     <%= form.label :title %><br>
     <%= form.text_field(:title, {:class =>'form-control'}) %>
-  </p>
-  <p>
+  </div>
+  <div>
     <%= form.label :body %><br>
     <%= form.text_area(:body, {:class =>'form-control'})%>
-  </p>
-  <p>
+  </div>
+  <div>
     <%= form.label :categories %><br>
-    <%= form.text_area(:categories, {:class =>'form-control'})%>
-  </p>
-  <p>
+    <%= form.text_field(:categories, {:class =>'form-control'})%>
+  </div>
+  <div>
     <%= form.submit({:class =>'btn btn-primary'}) %>
-  </p>
-
-  
-  
+  </div>
 <% end %>

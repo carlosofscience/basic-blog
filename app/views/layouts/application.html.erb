@@ -5,16 +5,21 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%
+=begin%>
+ <!--<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>--> 
+<%
+=end%>
   </head>
 
   <body>
     <header>
-      <ul>
-        <li> <%= link_to  "HOME", home_path %> </li> <!-- defined on routes --->
-        <li> <%= link_to  "CREATE POST", new_post_path %> </li>
-      <ul>
+      <ul class="wrapper">
+        <li> <%= link_to  "HOME", home_path, class: "btn btn-success" %> </li> <!-- defined on routes --->
+        <li> <%= link_to  "CREATE POST", new_post_path, class: "btn btn-success" %> </li>
+      </ul>
     </header>
-    <main>
+    <main class="wrapper">
       <%= yield %>
     </main>
   </body>

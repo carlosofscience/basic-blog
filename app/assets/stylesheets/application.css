@@ -13,3 +13,136 @@
  *= require_tree .
  *= require_self
  */
+*{
+  margin: 0;
+  padding: 0;
+  font-family:sans-serif;
+  /* outline: 1px solid red; */
+}
+header{
+  height: 100px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(31, 31, 32, 0.1);
+}
+
+header ul{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  font: 14px Lato,
+  sans-serif;
+}
+
+ul li{
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+}
+.wrapper{
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+
+.btn{
+  border: none;
+  border-radius: 15px;
+  padding: 1em;
+  background-color: rgb(80, 116, 236);
+  box-shadow: 0 3px 7px 0 rgba(102, 144, 241, 0.5);
+
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  transition: ease-in-out 0.1s background-color;
+  font-weight: bold;
+}
+
+.btn:hover{
+    background-color: rgb(115, 140, 221);
+    box-shadow: 0 8px 16px 0 rgba(102, 174, 241, 0.2);
+
+}
+
+.btn:active {
+  transform: translateY(2px);
+}
+
+.btn-success{
+  background-color: rgba(61, 207, 129, 0.75);
+  box-shadow: 0 3px 7px 0 rgba(102, 241, 234, 0.5);
+
+}
+
+.btn-success:hover{
+  background-color: rgba(98, 230, 160, 0.75);
+  box-shadow: 0 8px 16px 0 rgba(102, 241, 234, 0.2);
+}
+
+.container{
+  padding: 1em;
+  margin: 1em;
+  display: block;
+  padding-bottom: 70px;
+  border-radius: 7px;
+  position: relative;
+  background-color: #f9f9f9;
+  box-shadow: 0 7px 7px rgba(31, 31, 32, 0.2);
+}
+/* global ends here */
+
+h3,
+h2,
+h1{
+ padding: 1.5em;
+}
+
+.container > p {
+  padding:2em;
+  font-size: 1.2em;
+
+}
+
+.container p:not(.category-tags){
+  padding-bottom: 4em;
+}
+
+
+.post .btn {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+}
+
+.category-tags {
+  display: flex;
+  gap: 1em;
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+}
+
+.tag {
+  padding: 5px;
+  border: dashed 3px green;
+  background-color: rgb(188, 250, 188);
+}
+
+.post-form{
+  padding: 2em;
+
+}
+.post-form input, .post-form textarea{
+  margin: 1em auto;
+  padding:1em; 
+  display: block;
+  width: calc(100% - 2em);
+  resize:none;
+}
+.post-form .btn{
+  display: inline; 
+  width: 100px;
+}
