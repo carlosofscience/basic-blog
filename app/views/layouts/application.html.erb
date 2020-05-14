@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Myapp</title>
+    <title>Blog</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <ul>
+        <li> <%= link_to  "HOME", home_path %> </li> <!-- defined on routes --->
+        <li> <%= link_to  "CREATE POST", new_post_path %> </li>
+      <ul>
+    </header>
+    <main>
+      <%= yield %>
+    </main>
   </body>
 </html>
