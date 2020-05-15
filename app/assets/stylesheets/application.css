@@ -103,7 +103,7 @@ h1{
 .container > p {
   padding:2em;
   font-size: 1.2em;
-
+  overflow-wrap: break-word;
 }
 
 .container p:not(.category-tags){
@@ -141,6 +141,11 @@ h1{
   display: block;
   width: calc(100% - 2em);
   resize:none;
+  font-size: 14px;
+}
+
+.post-form textarea{
+  min-height:250px;
 }
 .post-form .btn{
   display: inline; 
