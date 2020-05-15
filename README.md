@@ -1,6 +1,10 @@
 # Simple Blog
 
-the blog allows an authorized user using simple http authentication to create new comments, update, delete posts and comments, and allows to any user to view blogs and comments, and create comments only. The webapp uses Ruby On Rails framework, PostgreSQL for the Model and it's a MVC demonstration. 
+the blog allows an authorized user using simple http authentication to create new comments, update, delete posts and comments, and allows to any user to view blogs and comments, and create comments only. The webapp uses Ruby On Rails framework, PostgreSQL for the Model and it's a MVC demonstration. A hosted version is available at:
+
+```
+  https://nameless-chamber-19865.herokuapp.com/
+```
 
 
 Things you may want to cover:
@@ -22,6 +26,10 @@ Things you may want to cover:
 * Database initialization
 
 * How to run the test suite
+  ```
+  $ rspec
+  ```
+  to run the server locally run:
   ```
   $ rails server
   ```
