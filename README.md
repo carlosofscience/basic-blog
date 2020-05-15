@@ -1,13 +1,10 @@
 # Simple Blog
 
-the blog allows an authorized user using simple http authentication to create new comments, update, delete posts and comments, and allows to any user to view blogs and comments, and create comments only. The webapp uses Ruby On Rails framework, PostgreSQL for the Model and it's a MVC demonstration. A hosted version is available at:
+The blog allows authorized users to create new comments, update, delete posts and comments using simple http authentication, and no authenticated users to view blogs and comments, and create comments only. The webapp uses Ruby On Rails framework, PostgreSQL for the Model, rspec tests and it's a MVC demonstration. A hosted version is available at:
 
 ```
   https://nameless-chamber-19865.herokuapp.com/
 ```
-
-
-Things you may want to cover:
 
 * Ruby version
 
@@ -19,12 +16,15 @@ Things you may want to cover:
   
   PostgreSQL, Git, GitBash (optional)
 
-* Configuration
-  
-* Database creation
-
 * Database initialization
-
+  for local migration
+  ```
+  rake db:migrate
+  ```
+  for deploy migration
+  ```
+  heroku run rake db:migrate
+  ```
 * How to run the test suite
   ```
   $ rspec
@@ -35,8 +35,27 @@ Things you may want to cover:
   ```
   then open a browser window at http://localhost:3000
 
-* Services (job queues, cache servers, search engines, etc.)
-
 * Deployment instructions
 
-* ...
+  Once registered, and logged in with heroku proceed to push git repo to heroku:
+  ```
+  git push heroku master
+  ```
+  migrate database:
+  ```
+  heroku run rake db:migrate
+  ```
+  start the web process:
+  ```
+  heroku ps:scale web=1
+  ```
+  verify that is running with no errors:
+  ```
+  heroku ps
+  ```
+  finally, run 
+  ```
+  heroku open
+  ```
+  which will open a browser window with the deployed app.
+

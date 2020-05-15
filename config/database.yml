@@ -23,9 +23,9 @@ default: &default
 
 development:
   <<: *default
-  database: myapp_development
-  username: postgres
-  password: vince11
+  database: <your_database_name_here>
+  username: <your_username_here>
+  password: <your_password_here>
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
@@ -58,9 +58,9 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: myapp_test
-  username: postgres
-  password: vince11
+  database: <your_database_name_here>
+  username: <your_username_here>
+  password: <your_password_here>
   port: 5433
 
 # As with config/secrets.yml, you never want to store sensitive information,
