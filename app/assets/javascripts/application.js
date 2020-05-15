@@ -14,6 +14,3 @@
 //= require turbolinks
 //= require_tree .
 
-// setInterval(()=>{
-//   location.reload(); 
-// }, 2000);

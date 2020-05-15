@@ -1,6 +1,7 @@
 <div class="container post-view">
   <h2><%= @post.title %></h2>
   <p><%= @post.body %></p>
+  <span class="date"><%= @post.created_at %></span>
   <p class="category-tags">
     <% @post.categories.split.each do |category| %>
       <span class="tag"> <%= category %> </span><br>
